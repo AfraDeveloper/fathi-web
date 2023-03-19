@@ -1,0 +1,20 @@
+.services {
+  /* background-image: url("./../../assets/img/bg3.webp"); */
+  /* background-size: cover; */
+  /* background-attachment: fixed; */
+  /* height: 100vh; */
+  /* position: relative; */
+}
+.service__card {
+  /* border: 1px solid #f9742a; */
+  border-radius: 16px;
+  background-color: #212121e9;
+  box-shadow: var(--boxShadow);
+}
+
+/* .service__card:nth-child(2) {
+  transform: translateY(48px);
+}
+.service__card:nth-child(3) {
+  transform: translateY(96px);
+} */
