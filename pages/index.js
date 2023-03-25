@@ -15,6 +15,7 @@ import Articles from "../components/Articles/Articles";
 import Gallery from "../components/Gallery/Gallery";
 import NewLess from "../components/NewLess";
 import Footer from "../components/Footer";
+import ContactUs from "../components/ContactUs/ContactUs";
 export default function Home() {
   // const { t } = useTranslation("common");
   const particlesInit = useCallback(async (engine) => {
@@ -50,8 +51,9 @@ export default function Home() {
       <Example />
       <Articles /> 
       <Gallery/>
-     {/* <NewLess/>
-      <Footer/> */}
+      <ContactUs/>
+      <NewLess/>
+      <Footer/> 
   
     </>
   );

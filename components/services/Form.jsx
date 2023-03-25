@@ -144,7 +144,7 @@ const Form = () => {
         </div>}
         <div className="flex gap-6 justify-end w-full">
           <button type='button' onClick={() => setToggle(!toggle)} className='bg-sky-500 text-sm h-10 px-2 rounded-md'>ارسال عکس </button>
-          <button className='bg-green-500 text-sm h-10 px-2 rounded-md'>ثبت درخواست  </button>
+          <button className='bg-green-500 text-sm text-white h-10 px-2 rounded-md'>ثبت درخواست  </button>
         </div>
       </form>
     </div>
