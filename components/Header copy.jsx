@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { UilUser, UilSun, UilMoon } from "@iconscout/react-unicons";
-import { useContext, useRef } from "react";
+import { useRef,useContext } from "react";
 import ThemeContext from "../ContextProvider";
 import { UilGlobe } from '@iconscout/react-unicons'
 import { UilListUiAlt } from '@iconscout/react-unicons'
+import { UilUser, UilSun, UilMoon } from "@iconscout/react-unicons";
 const outsideClick = (toggle_ref, content_ref) => {
   if (typeof window !== "undefined") {
     document.addEventListener("mousedown", (e) => {
@@ -19,9 +19,7 @@ const outsideClick = (toggle_ref, content_ref) => {
   }
 
 };
-const Header2 = () => {
-  const lang = useRef(null)
-  const lang_btn = useRef(null)
+const Header = () => {
   const navList = useRef(null)
 
   const { dark, toggleDark } = useContext(ThemeContext);
@@ -34,12 +32,10 @@ const Header2 = () => {
   const handleClose = () => {
     navList.current.classList.remove("active")
   }
-
   return (
-    <div className="w-full bg-transparent bg-[#344BA8]  shadow-sm  dark:bg-[#10102e]  z-[100] sticky top-0">
+    <div className="w-full  bg-[#344BA8]  shadow-sm  dark:bg-[#10102e]  z-[110] sticky top-0">
       <header dir="rtl" className="flex  items-center text-white  justify-between p-5 
       w-full md:container mx-auto   shadow-lg md:shadow-none">
-        aaa
          <motion.div
           initial={{
             x: 500,
@@ -57,8 +53,7 @@ const Header2 = () => {
           <button className="lg:hidden translate-y-2 pl-2" onClick={handleMenu}>< UilListUiAlt /></button>
           <p>محمد فتحی</p>
         </motion.div> 
-
-        {/* <div
+        <div
           ref={navList}
           className={`z-[105] navlist`}
         >
@@ -83,8 +78,8 @@ const Header2 = () => {
             </Link>
             <button onClick={handleClose} className="absolute dark:text-white lg:hidden top-4 left-4 z-[101]">X</button>
           </div>
-        </div> */}
-        {/* <motion.div
+        </div>
+        <motion.div
           initial={{
             x: -500,
             opacity: 0,
@@ -105,15 +100,13 @@ const Header2 = () => {
           <button onClick={() => toggleDark()} className="btn-indigo">
             {dark ? <UilSun size={16} /> : <UilMoon size={16} />}
           </button>
-           <button ref={lang_btn} className="btn-indigo group relative">
-            <UilGlobe size={16} />
-          </button> 
+        
         
 
-        </motion.div> */}
+        </motion.div>
       </header>
     </div>
-  );
-};
+  )
+}
 
-export default Header2;
+export default Header;
