@@ -1,12 +1,12 @@
 // import "./intro.css";
 import Image from "next/image";
 import model from "../assets/img/banner.png";
-import { motion } from 'framer-motion'
-import { TypeAnimation } from 'react-type-animation';
+import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 
 // import { UilStethoscopeAlt } from "@iconscout/react-unicons";
-import { UilChartBar } from '@iconscout/react-unicons'
-import { UilHeartbeat } from '@iconscout/react-unicons'
+import { UilChartBar } from "@iconscout/react-unicons";
+import { UilHeartbeat } from "@iconscout/react-unicons";
 import {
   UilInstagram,
   UilFacebookF,
@@ -14,7 +14,6 @@ import {
   UilCrockery,
   UilDumbbell,
   UilStethoscopeAlt,
-
 } from "@iconscout/react-unicons";
 import Banner from "./Banner";
 
@@ -29,27 +28,32 @@ const Intro = () => {
         dark:text-white dark:bg-gray-800/70 px-4 py-8 md:p-12 "
           >
             <span className="text-white  dark:text-white text-2xl lg:text-5xl font-extrabold">
-              من <span className="text-gray-200 px-2 dark:text-orange-500">محمد فتحی</span> هستم
+              من{" "}
+              <span className="text-gray-200 px-2 dark:text-orange-500">
+                محمد فتحی
+              </span>{" "}
+              هستم
             </span>
-           
+
             <TypeAnimation
-      sequence={[
-        'مربی بین المللی بدنسازی', // Types 'One'
-        1000, // Waits 1s
-        'متخصص تغذیه', // Deletes 'One' and types 'Two'
-        2000, // Waits 2s
-        ' داور بین المللی مسابقات ورزشی',
-        3000,
-        'مربی انجمن قدرت و آمادگی جسمانی', 4000,
-        () => {
-          // console.log('Done typing!'); // Place optional callbacks anywhere in the array
-        }
-      ]}
-      wrapper="span"
-      cursor={true}
-      repeat={Infinity}
-      style={{ fontSize: '24px',color:'white' }}
-    />
+              sequence={[
+                "مربی بین المللی بدنسازی", // Types 'One'
+                1000, // Waits 1s
+                "متخصص تغذیه", // Deletes 'One' and types 'Two'
+                2000, // Waits 2s
+                " داور بین المللی مسابقات ورزشی",
+                3000,
+                "مربی انجمن قدرت و آمادگی جسمانی",
+                4000,
+                () => {
+                  // console.log('Done typing!'); // Place optional callbacks anywhere in the array
+                },
+              ]}
+              wrapper="span"
+              cursor={true}
+              repeat={Infinity}
+              style={{ fontSize: "24px", color: "white" }}
+            />
           </div>
 
           <div className="intro__boxes gap-2 sm:gap-4 md:gap-8 mt-8 lg:mt-4">
@@ -87,34 +91,31 @@ const Intro = () => {
         <div className="intro__left  ">
           <motion.div
             initial={{
-
               opacity: 0,
               scale: 0.2,
             }}
             exit={{
-
               opacity: 0,
               scale: 0.2,
             }}
-
             whileInView={{
-
               opacity: 1,
               scale: 1,
             }}
-            transition={{ duration: 1 }}>
-              <Banner/>
-              <div className="absolute top-0 left-0 w-full h-full ">
-                <span className="bg-blue-500 top-0 left-0 absolute text-white inline-block p-8 rounded-full">
-                  <UilDumbbell size={34}/>
-                </span>
-                <span className="bg-rose-500 top-24 -right-8 absolute text-white inline-block p-8 rounded-full">
-                  <UilHeartbeat size={34}/>
-                </span>
-                <span className="bg-orange-600 bottom-24 -left-8 absolute text-white inline-block p-8 rounded-full">
-                  <UilChartBar size={34}/>
-                </span>
-              </div>
+            transition={{ duration: 1 }}
+          >
+            <Banner />
+            <div className="absolute top-0 left-0 w-full h-full ">
+              <span className="bg-blue-500 top-0 left-0 absolute text-white inline-block p-3 lg:p-8 rounded-full">
+                <UilDumbbell size={34} />
+              </span>
+              <span className="bg-rose-500 top-24 -right-8 absolute text-white inline-block p-3 lg:p-8 rounded-full">
+                <UilHeartbeat size={34} />
+              </span>
+              <span className="bg-orange-600 bottom-24 -left-8 absolute text-white inline-block p-3 lg:p-8 rounded-full">
+                <UilChartBar size={34} />
+              </span>
+            </div>
             {/* <Image src={model} alt="" className="hover:translate-x-8 duration-500 lg:-translate-y-12 " /> */}
           </motion.div>
         </div>

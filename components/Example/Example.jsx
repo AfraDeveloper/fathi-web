@@ -43,7 +43,8 @@ const CardItemSample = ({ item }) => {
           <p className="text-orange-400"> {item.time} روز</p>
         </div>
         <p>
-        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+          از طراحان گرافیک است
         </p>
       </div>
     </div>
@@ -90,7 +91,7 @@ export const Example = () => {
         {" "}
         نمونه کار{" "}
       </motion.h3>
-      <div className="container">
+      <div className="w-full md:container">
         <Swiper
           spaceBetween={50}
           slidesPerView="3"
@@ -99,6 +100,30 @@ export const Example = () => {
           scrollbar={{ draggable: true }}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
+          breakpoints={{
+            320: {
+              width: 320,
+              spaceBetween: 10,
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            576: {
+              width: 576,
+              slidesPerView: 1,
+            },
+            768: {
+              width: 768,
+              slidesPerView: 2,
+            },
+            991: {
+              width: 991,
+              slidesPerView: 3,
+            },
+            1024: {
+              width: 1024,
+              slidesPerView: 3,
+            },
+          }}
         >
           {samples.map((item, index) => (
             <SwiperSlide key={index}>
@@ -108,7 +133,7 @@ export const Example = () => {
         </Swiper>
       </div>
       <div className="container my-8">
-        <div className="exprience md:w-9/12 lg:w-6/12 mx-auto gap-4 f-dast z-10 grid grid-cols-4  mt-24 container">
+        <div className="exprience md:w-9/12 lg:w-6/12 mx-auto gap-4 f-dast z-10 hidden md:grid  md:grid-cols-4  mt-24 container">
           <ExperienceItem count={325} title="ورزشکار" />
           <ExperienceItem count={90} title="برنامه" />
           <ExperienceItem count={120} title="مشاوره" />

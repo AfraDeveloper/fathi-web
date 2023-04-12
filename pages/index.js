@@ -45,16 +45,16 @@ export default function Home() {
         </div>
       )}
       <Header />
-       <Intro />
+      <Intro />
       <Services />
       <Timeline />
+
       <Example />
-      <Articles /> 
-      <Gallery/>
-      <ContactUs/>
-      <NewLess/>
-      <Footer/> 
-  
+      {/* <Articles />*/}
+      <Gallery />
+      {/* <ContactUs/>*/}
+      <NewLess />
+      <Footer />
     </>
   );
 }
